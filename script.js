@@ -335,12 +335,12 @@ function refreshUI() {
 }
 
 function getTimeRemaining() {
-        let remainder = (Date.parse(new Date())) / 1000 % 600;
+        let remainder = (Date.parse(new Date())) / 1000 % 86400;
         console.log(remainder);
-        if(remainder < 120) {
-          secondsRemaining = 120 - remainder;
-        } else if(remainder >= (120 + 120)) {
-            secondsRemaining = 600 - remainder;
+        if(remainder < 7200) {
+          secondsRemaining = 7200 - remainder;
+        } else if(remainder >= (7200  + 1200 )) {
+            secondsRemaining = 86400 - remainder;
           } else {
               secondsRemaining = 0;
           }
@@ -348,7 +348,10 @@ function getTimeRemaining() {
 	seconds = seconds < 10 ? "0" + seconds.toString() : seconds;
 	let minutes = Math.floor(((secondsRemaining) / 60) % 60);
 	minutes = minutes < 10 ? "0" + minutes.toString() : minutes;
+	let hours = Math.floor(((secondsRemaining) / (60 * 60)) % 60);
+	hours = hours < 10 ? "0" + hours.toString() : hours;
 	return {
+		hours,
 		minutes,
 		seconds
 	};
@@ -356,7 +359,7 @@ function getTimeRemaining() {
 
 async function updateTimes() {
   let obj = getTimeRemaining();
-  let timerString = obj.minutes + " : " + obj.seconds;
+  let timerString = obj.hours + " : " + obj.minutes + " : " + obj.seconds;
   $('#rebaseTimer').text(timerString);
 }
 
