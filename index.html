@@ -21,9 +21,7 @@
 	.nuxt-progress{position:fixed;top:0;left:0;right:0;height:5px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#fafafa;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}
 	</style>
 <style type="text/css">
-* {
-}
-
+	
 body {
 	background-color:black;
 }
@@ -4735,16 +4733,16 @@ a.panel-block:hover, label.panel-block:hover {
 	color: #eee
 }
 .input::-moz-placeholder, .select select::-moz-placeholder, .taginput .taginput-container.is-focusable::-moz-placeholder, .textarea::-moz-placeholder {
-	color: #393939
+	color: #eaeaea
 }
 .input::-webkit-input-placeholder, .select select::-webkit-input-placeholder, .taginput .taginput-container.is-focusable::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
-	color: #393939
+	color: #eaeaea
 }
 .input:-moz-placeholder, .select select:-moz-placeholder, .taginput .taginput-container.is-focusable:-moz-placeholder, .textarea:-moz-placeholder {
-	color: #393939
+	color: #eaeaea
 }
 .input:-ms-input-placeholder, .select select:-ms-input-placeholder, .taginput .taginput-container.is-focusable:-ms-input-placeholder, .textarea:-ms-input-placeholder {
-	color: #393939
+	color: #eaeaea
 }
 .input:hover, .is-hovered.input, .is-hovered.textarea, .select select.is-hovered, .select select:hover, .taginput .is-hovered.taginput-container.is-focusable, .taginput .taginput-container.is-focusable:hover, .textarea:hover {
 	border-color: #eee
@@ -4760,16 +4758,16 @@ a.panel-block:hover, label.panel-block:hover {
 	color: #5e5e5e
 }
 .input[disabled]::-moz-placeholder, .select fieldset[disabled] select::-moz-placeholder, .select select[disabled]::-moz-placeholder, .taginput .taginput-container.is-focusable[disabled]::-moz-placeholder, .taginput fieldset[disabled] .taginput-container.is-focusable::-moz-placeholder, .textarea[disabled]::-moz-placeholder, fieldset[disabled] .input::-moz-placeholder, fieldset[disabled] .select select::-moz-placeholder, fieldset[disabled] .taginput .taginput-container.is-focusable::-moz-placeholder, fieldset[disabled] .textarea::-moz-placeholder {
-	color: rgba(94, 94, 94, .3)
+	color: #eaeaea
 }
 .input[disabled]::-webkit-input-placeholder, .select fieldset[disabled] select::-webkit-input-placeholder, .select select[disabled]::-webkit-input-placeholder, .taginput .taginput-container.is-focusable[disabled]::-webkit-input-placeholder, .taginput fieldset[disabled] .taginput-container.is-focusable::-webkit-input-placeholder, .textarea[disabled]::-webkit-input-placeholder, fieldset[disabled] .input::-webkit-input-placeholder, fieldset[disabled] .select select::-webkit-input-placeholder, fieldset[disabled] .taginput .taginput-container.is-focusable::-webkit-input-placeholder, fieldset[disabled] .textarea::-webkit-input-placeholder {
-	color: rgba(94, 94, 94, .3)
+	color: #eaeaea
 }
 .input[disabled]:-moz-placeholder, .select fieldset[disabled] select:-moz-placeholder, .select select[disabled]:-moz-placeholder, .taginput .taginput-container.is-focusable[disabled]:-moz-placeholder, .taginput fieldset[disabled] .taginput-container.is-focusable:-moz-placeholder, .textarea[disabled]:-moz-placeholder, fieldset[disabled] .input:-moz-placeholder, fieldset[disabled] .select select:-moz-placeholder, fieldset[disabled] .taginput .taginput-container.is-focusable:-moz-placeholder, fieldset[disabled] .textarea:-moz-placeholder {
-	color: rgba(94, 94, 94, .3)
+	color: #eaeaea
 }
 .input[disabled]:-ms-input-placeholder, .select fieldset[disabled] select:-ms-input-placeholder, .select select[disabled]:-ms-input-placeholder, .taginput .taginput-container.is-focusable[disabled]:-ms-input-placeholder, .taginput fieldset[disabled] .taginput-container.is-focusable:-ms-input-placeholder, .textarea[disabled]:-ms-input-placeholder, fieldset[disabled] .input:-ms-input-placeholder, fieldset[disabled] .select select:-ms-input-placeholder, fieldset[disabled] .taginput .taginput-container.is-focusable:-ms-input-placeholder, fieldset[disabled] .textarea:-ms-input-placeholder {
-	color: rgba(94, 94, 94, .3)
+	color: #eaeaea
 }
 .input, .taginput .taginput-container.is-focusable, .textarea {
 	box-shadow: inset 0 1px 2px rgba(44, 69, 56, .1);
@@ -13711,6 +13709,57 @@ fieldset[disabled] .withdraw-data-item span {
 									</div>
 								</div>
 							</div>
+								<div class="columns">
+                <div class="column is-full">
+                  <div class="b-tabs is-tornado" style="max-width:none!important;">
+                    <section class="tab-content">
+			 <div style="margin:auto; margin-bottom:1.25rem;"><label class="label" style="font-size:1.5rem">Burn Donuts To Receive Coffee</label></div>			    
+			 <div style="margin-bottom:1.25rem;"><label class="label">Burn 1 DONUT : Receive 4 COFFEE</label></div>			    
+                      <div class="tab-item" style="">
+                        <div>
+                            <div class="field">
+                              <label class="label">AVAILABLE COFFEE</label>
+                              <div class="is-mobile-modal is-expanded">
+                                <div aria-haspopup="true" class="dropdown-trigger" role="button">
+                                  <div class="control">
+                                    <input class="input" id="coffeeRemaining" disabled style="background-color:transparent;" type="text" placeholder="0 COFFEE">
+                                  </div>
+                                </div>
+                                <div aria-hidden="true" class="background" style="display: none;"></div>
+                                <div aria-hidden="true" class="dropdown-menu" style="display: none;">
+                                  <div class="dropdown-content" role="list">
+                                    <a class="dropdown-item is-active" role="listitem" tabindex="0">ETH</a> <a class="dropdown-item" role="listitem" tabindex="0">DAI</a> <a class="dropdown-item" role="listitem" tabindex="0">cDAI</a> <a class="dropdown-item" role="listitem" tabindex="0">USDC</a> <a class="dropdown-item" role="listitem" tabindex="0">USDT</a>
+                                  </div>
+                                </div>
+                              </div><!---->
+                            </div>				
+                          <fieldset>
+                            <div class="field">
+                              <label class="label">Amount</label>
+                              <div class="is-mobile-modal is-expanded">
+                                <div aria-haspopup="true" class="dropdown-trigger" role="button">
+                                  <div class="control">
+                                    <input id="burnAmount" class="input" style="background-color:transparent;" type="number" step="0.01" min="0">
+                                  </div>
+                                </div>
+                                <div aria-hidden="true" class="background" style="display: none;"></div>
+                                <div aria-hidden="true" class="dropdown-menu" style="display: none;">
+                                  <div class="dropdown-content" role="list">
+                                    <a class="dropdown-item is-active" role="listitem" tabindex="0">ETH</a> <a class="dropdown-item" role="listitem" tabindex="0">DAI</a> <a class="dropdown-item" role="listitem" tabindex="0">cDAI</a> <a class="dropdown-item" role="listitem" tabindex="0">USDC</a> <a class="dropdown-item" role="listitem" tabindex="0">USDT</a>
+                                  </div>
+                                </div>
+                              </div><!---->
+                            </div>
+                            <div class="field">
+                            </div>
+				  <span id="numOfCoffee"></span>
+                          </fieldset><button id="burn" class="button is-primary is-fullwidth" type="button"><!----> <span>Burn</span> <!----></button>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
 							<div class="txs" style="display: none;">
 								<div class="tx-filters buttons">
 									<div class="tx-filters-title">
@@ -13779,7 +13828,7 @@ fieldset[disabled] .withdraw-data-item span {
 								<div class="level-item is-column">
 									<div class="level-subitem footer-address">
 										<div class="footer-address__name">
-											"COFFEE Token Contract Address:
+											COFFEE Token Contract Address:
 										</div><a class="footer-address__value" href="https://etherscan.io/address/0x7ad0e4BABa3D65c184b5EfA096109F3C2Dee728c" target="_blank">0x7ad0e4BABa3D65c184b5EfA096109F3C2Dee728c</a>
 									</div>
 								</div>
