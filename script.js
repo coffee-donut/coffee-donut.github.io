@@ -491,6 +491,7 @@ async function updateOther() {
     let amount = $('#burnAmount').val();
     let allowance = await contract_.burnAllowance();
     allowance = allowance.div(1e18).toFixed();
+	console.log(allowance, amount);
     if(parseFloat(allowance) < parseFloat(amount)) {
       await contract_.burnApprove();
       setTimeout(async function() {
