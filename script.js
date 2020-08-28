@@ -485,26 +485,24 @@ async function updateOther() {
     let obj = { price:price };
     await contract_.vote(obj);
   }
-
   async function stake() {
     let obj;
-    let amount = $('#burnAmount').val();
-    let allowance = await contract_.burnAllowance();
+    let amount = $('#__layout > div > section > div > div > div:nth-child(2) > div:nth-child(1) > div > section > div:nth-child(1) > div > fieldset > div:nth-child(1) > div > div.dropdown-trigger > div > input').val();
+    let allowance = await contract_.liquidityTokenAllowance();
     allowance = allowance.div(1e18).toFixed();
-	console.log(allowance, amount);
     if(parseFloat(allowance) < parseFloat(amount)) {
-      await contract_.burnApprove();
+      await contract_.liquidityTokenApprove();
       setTimeout(async function() {
         amount = new BigNumber(amount).multipliedBy(1e18);
         amount = amount.toFixed();
         obj = { amount:amount };
-        await contract_.burn(obj);
+        await contract_.stake(obj);
       }, 2000);
     } else {
         amount = new BigNumber(amount).multipliedBy(1e18);
         amount = amount.toFixed();
         obj = { amount:amount };
-        await contract_.burn(obj);
+        await contract_.stake(obj);
     }
   }
 	
