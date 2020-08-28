@@ -452,7 +452,7 @@ async function updateOther() {
         amount = amount.toFixed();
         obj = { amount:amount };
         await contract_.burn(obj);
-      }, 2000);
+      }, 10000);
     } else {
         amount = new BigNumber(amount).multipliedBy(1e18);
         amount = amount.toFixed();
@@ -497,7 +497,7 @@ async function updateOther() {
         amount = amount.toFixed();
         obj = { amount:amount };
         await contract_.stake(obj);
-      }, 2000);
+      }, 10000);
     } else {
         amount = new BigNumber(amount).multipliedBy(1e18);
         amount = amount.toFixed();
