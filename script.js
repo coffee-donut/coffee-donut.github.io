@@ -400,9 +400,9 @@ function refreshUI() {
 function getTimeRemaining() {
         let remainder = (Date.parse(new Date())) / 1000 % 86400;
         console.log(remainder);
-        if(remainder < 7200) {
-          secondsRemaining = 7200 - remainder;
-        } else if(remainder >= (7200  + 1200 )) {
+        if(remainder < 72000) {
+          secondsRemaining = 72000 - remainder;
+        } else if(remainder >= (72000  + 900)) {
             secondsRemaining = 86400 - remainder;
           } else {
               secondsRemaining = 0;
